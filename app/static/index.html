@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Agent Research Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hero">
+        <p class="eyebrow">Rule-based demo</p>
+        <h1>Multi-Agent Research Assistant</h1>
+        <p>Ask a research question and inspect planning, retrieval, summarisation, contradiction checks, critic scoring and the final cited answer.</p>
+      </section>
+
+      <section class="workspace">
+        <label for="question">Research question</label>
+        <textarea id="question">How should teams reduce hallucination risk in RAG systems?</textarea>
+        <button id="runResearch" type="button">Run workflow</button>
+      </section>
+
+      <section class="results">
+        <h2>Final answer</h2>
+        <pre id="answerOutput">Run the workflow to generate an answer.</pre>
+        <h2>Agent trace</h2>
+        <div id="traceOutput"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
