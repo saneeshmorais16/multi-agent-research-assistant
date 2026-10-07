@@ -19,3 +19,10 @@ def test_research_endpoint():
     assert payload["agent_trace"]
     assert "direct_answer" in payload
     assert payload["citations"]
+    assert 0 <= payload["grounding_score"] <= 100
+    assert payload["confidence"] in {"low", "medium", "high"}
+
+
+def test_research_endpoint_rejects_short_questions():
+    response = client.post("/research", json={"question": "RAG?"})
+    assert response.status_code == 422

@@ -34,6 +34,7 @@ LLM-style assistants can hallucinate when they answer without evidence. This pro
 - Vector-style retrieval
 - Multi-agent workflow
 - Grounded answer generation with citations
+- Structured FastAPI response validation for confidence and grounding scores
 - Agent trace and critic feedback
 - SQLite storage for runs, steps, chunks and answers
 - Simple frontend
